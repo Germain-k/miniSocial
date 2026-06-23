@@ -10,6 +10,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
+    "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
       "@domain/*": ["src/domain/*"],
@@ -17,6 +18,6 @@
       "@infrastructure/*": ["src/infrastructure/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*","src/prisma.config.ts"],
   "exclude": ["node_modules", "dist"]
 }
