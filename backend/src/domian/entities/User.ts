@@ -2,9 +2,9 @@ import { SpawnSyncOptionsWithStringEncoding } from "node:child_process";
 
 export interface User{
     id: string;
-    emai: string;
+    email: string;
     username: string;
-    password: String;
+    password: string;
     bio?: string;
     avatar?: string;
     createdAt : Date;
