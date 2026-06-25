@@ -8,7 +8,7 @@ export interface Post {
     updatedAt:Date;
 }
 
-export interface PostWithauthor extends Post {
+export interface PostWithAuthor extends Post {
     author: PublicUser;
     _count:{
         likes:number;

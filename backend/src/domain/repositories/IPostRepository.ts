@@ -1,4 +1,4 @@
-import { Post, PostWithauthor} from "../entities/Post";
+import { Post, PostWithAuthor} from "../entities/Post";
 
 export interface CreatePostDTO {
     content: string;
@@ -6,9 +6,9 @@ export interface CreatePostDTO {
 }
 
 export interface IPostRepository {
-    findById(id: string): Promise<PostWithauthor| null>;
-    findByAuthorId(authorId: string): Promise<PostWithauthor[]>;
-    findnewsFeed(userId: string): Promise<PostWithauthor[] >;
-    create(data: CreatePostDTO): Promise<PostWithauthor>;
+    findById(id: string): Promise<PostWithAuthor| null>;
+    findByAuthorId(authorId: string): Promise<PostWithAuthor[]>;
+    findnewsFeed(userId: string): Promise<PostWithAuthor[] >;
+    create(data: CreatePostDTO): Promise<PostWithAuthor>;
     delete(id: string) : Promise<void>;
-}
+} 

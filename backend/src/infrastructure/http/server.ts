@@ -1,5 +1,6 @@
 import express, { Application } from "express";
 import authRoutes from "./routes/authRoutes";
+import postRoutes   from "./routes/postRoutes"
 
 const createServer = (): Application => {
   const app: Application = express();
@@ -7,8 +8,9 @@ const createServer = (): Application => {
   // Middleware pour parser le JSON
   app.use(express.json());
 
-  // toutes les routes auth sous /api/auth
+  // toutes les routes
   app.use("/api/auth",authRoutes);
+  app.use("/api/posts",postRoutes);
 
   //route de test
   app.get("/health", (req, res) => {
