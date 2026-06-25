@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
-import { IUserRepository } from "src/domian/repositories/IUserRepository";
-import { PublicUser } from "src/domian/entities/User";
+import { IUserRepository } from "src/domain/repositories/IUserRepository";
+import { PublicUser } from "src/domain/entities/User";
 
 export interface RegisterInput {
     email: string;

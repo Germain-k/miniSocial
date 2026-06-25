@@ -1,4 +1,5 @@
 import express, { Application } from "express";
+import authRoutes from "./routes/authRoutes";
 
 const createServer = (): Application => {
   const app: Application = express();
@@ -6,7 +7,10 @@ const createServer = (): Application => {
   // Middleware pour parser le JSON
   app.use(express.json());
 
-  // Route de test
+  // toutes les routes auth sous /api/auth
+  app.use("/api/auth",authRoutes);
+
+  //route de test
   app.get("/health", (req, res) => {
     res.json({ status: "ok", message: "MiniSocial API is running" });
   });
