@@ -1,6 +1,7 @@
 import express, { Application } from "express";
 import authRoutes from "./routes/authRoutes";
-import postRoutes   from "./routes/postRoutes"
+import postRoutes   from "./routes/postRoutes";
+import userRoutes from "./routes/userRoutes"
 
 const createServer = (): Application => {
   const app: Application = express();
@@ -11,6 +12,7 @@ const createServer = (): Application => {
   // toutes les routes
   app.use("/api/auth",authRoutes);
   app.use("/api/posts",postRoutes);
+  app.use("/api/users", userRoutes);
 
   //route de test
   app.get("/health", (req, res) => {
