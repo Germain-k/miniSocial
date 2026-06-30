@@ -2,9 +2,15 @@ import express, { Application } from "express";
 import authRoutes from "./routes/authRoutes";
 import postRoutes   from "./routes/postRoutes";
 import userRoutes from "./routes/userRoutes"
+import cors from "cors";
 
 const createServer = (): Application => {
   const app: Application = express();
+
+  app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  }));
 
   // Middleware pour parser le JSON
   app.use(express.json());
